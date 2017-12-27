@@ -1,0 +1,94 @@
+﻿<DOCTYPE html>
+<html lang="ua">
+<head>
+	
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Оцінка факторів впливу НГДУ на навколишнє середовище </h1>
+<h1> vou vou </h1>
+<form method="post" action="handler.php">
+	<fieldset>
+		<legend>Оцінка факторів впливу НГДУ на навколишнє середовище </legend>
+			<p><b>Загальні показники:</b></p>
+			<p><label for="personnel">Управлінський персонал,осіб </label><input type="number" name="personnel" value="164"></p>
+			<p><label for="workers">Працівники, осіб </label><input type="number" name="workers" value="1445"></p>
+			<p><b>Спеціальні показники:</b></p>
+			<p><label for="economicShamelessPackagin">Господарська тара, що повторно не використовується, т </label><input value="716" type="number" min="1" max="100" step="0.1" name="economicShamelessPackagin"></p>
+			<p><label for="totalHarmfulWaste">Сумарні шкідливі відходи, т </label><input type="number" min="1" max="100" step="0.1" name="totalHarmfulWaste"></p>
+			<p><label for="electricityConsumption">Споживання електроенергії, кВт </label><input type="number" name="electricityConsumption"></p>
+			<p><label for="gasConsumption">Споживання газу, кВт </label><input type="number" name="gasConsumption"></p>
+			<p><label for="fuelConsumption">Споживання палива, л </label><input type="number" name="fuelConsumption"></p>
+			<p><label for="useOfCentralizedHeating">Використання централізованого опалення, кВт </label><input type="number" name="useOfCentralizedHeating"></p>
+			<p><label for="drinkingWaterConsumption">Споживання питної води, м<sup>2</sup></label><input type="number" name="drinkingWaterConsumption"></p>
+			<p><label for="totalArea">Загальна площа, м<sup>2</sup></label><input type="number" name="totalArea"></p>
+			<p><label for="areaOfGreenPlantations">Площа зелених насаджень, м<sup>2</sup></label><input type="number" name="areaOfGreenPlantations"></p>
+			<p><label for="averageFuelConsumptionByAutoComany">Середнє споживання палива автотранспортом компанії, I/100 км </label><input type="number" min="1" max="100" step="0.1" name="averageFuelConsumptionByAutoComany"></p>
+			<p><label for="ofAllTheHarmfulSubstances">Всього шкідливих речовин, шт </label><input type="number" name="ofAllTheHarmfulSubstances"></p>
+			<p><label for="hazardousSubstances">Шкідливі речовини (токсичні, дуже токсичні, CMR), шт. </label><input type="number" name="hazardousSubstances"></p>
+			<p><label for="finesForViolatingTheRules">Штрафи за порушення правил, грн. </label><input type="number" name="finesForViolatingTheRules"></p>
+			<p><label for="finesForTheAccident">Штрафи за аварії, що спричинили забруднення навколишнього середовища, грн. </label><input type="number" name="finesForTheAccident"></p>
+			<p><label for="pollutesTheWater">Кількість речовин, що забруднює воду, шт. </label><input type="number" name="pollutesTheWater"></p>
+			<p><label for="theNeedForEquipment">Потреба в обладнанні, од. </label><input type="number" name="theNeedForEquipment"></p>
+			<p><label for="equipmentCosts">Витрати на обладнання, грн. </label><input type="number" name="equipmentCosts"></p>
+			<p><label for="traveledByTrain">Пройдений шлях протягом службових поїздок, км </label><input type="number" name="traveledByTrain"></p>
+			<p><label for="theResultOfTheResearch">Результати екологічних досліджень, n </label><input type="number" name="theResultOfTheResearch"></p>
+			<p><label for="numberOfEmployeesTrained">Кількість працівників, що пройшли навчання з охорони довкілля, осіб </label><input type="number" name="numberOfEmployeesTrained"></p>
+			<p><label for="numberOfTrainingSessions">Кількість навчальних занять, присвячених забрудненню навколишнього середовища, осіб </label><input type="number" name="numberOfTrainingSessions"></p>
+			<p><input type="reset" value="Очистити"></p>
+	</fieldset>
+</form>
+	<p><b>Фактори впливу на навколишнє середовище</b><p>
+<form nam="wasteForm">
+	<fieldset>
+		<legend>Відходи</legend>
+		<p><center><h3>Господарська тара, що не утилізується</h3></center></p>
+		<p>Вплив на навколишнє середовище:</p>
+		<p><input name="wasteShamelessPackaginRadio" type="radio" value="wastePackaginPos"> Позитивний</input>
+		<input name="wasteShamelessPackaginRadio" type="radio" value="wastePackaginNeg" checked> Негативний</input></p>
+		<p>Види забруднення відповідно законодавства</p>
+<script> 
+var Cont = 0; 
+function mFunc (x, y) 
+{ 
+var e = x || window.event, o = e.target || e.srcElement; with (o) 
+var s = (tagName == 'INPUT' && type == 'checkbox' && name == 'wasteShamelessPackaginChecked[]'); if (s) {Cont += 2 * o.checked - 1; 
+for (var j = 0, p = y.getElementsByTagName ('INPUT'); j < p.length; j++) with (p [j]) 
+if (type == 'checkbox' && name == 'wasteShamelessPackaginChecked') disabled = !(Cont - checked - 3)} 
+} 
+</script> 
+		<p><input type="checkbox" name="wasteShamelessPackaginChecked"  value="id1"> Відходи</input>
+		<input name="wasteShamelessPackaginChecked[]" type="checkbox" value="id2"> Хімікати</input>
+		<input name="wasteShamelessPackaginChecked[]" type="checkbox" value="id3"> Вода/стічні води</input>
+		<input name="wasteShamelessPackaginChecked[]" type="checkbox" value="id4"> Забруднення повітря</input>
+		<input name="wasteShamelessPackaginChecked[]" type="checkbox" value="id5"> Земля</input></p>
+	
+		<hr>
+		<p>Оцінка Cont</p>
+		<hr>
+		
+	<p>Вплив</p>
+	<table border="1">
+		<tr><td></td><td>Людина</td><td>Флора/фауна</td><td>Вода</td><td>Земля</td><td>Клімат</td></tr>
+		<tr><td>Нормальна робота</td><td><input name="wasteWorkAndWreckShamelessPackaginChecked[]" type="checkbox" value="id6"></input></td><td><input name="wasteWorkAndWreckShamelessPackaginChecked[]" type="checkbox" value="id7"></input></td><td><input name="wasteWorkAndWreckShamelessPackaginChecked[]" type="checkbox" value="id7"></input></td><td><input name="wasteWorkAndWreckShamelessPackaginChecked[]" type="checkbox" value="id8"></input></td><td><input name="wasteWorkAndWreckShamelessPackaginChecked[]" type="checkbox" value="id9"></input></td></tr>
+		<tr><td>Аварія</td><td><input name="wasteWorkAndWreckShamelessPackaginChecked[]" type="checkbox" value="id10"></input></td><td><input name="wasteWorkAndWreckShamelessPackaginChecked[]" type="checkbox" value="id11"></input></td><td><input name="wasteWorkAndWreckShamelessPackaginChecked[]" type="checkbox" value="id12"></input></td><td><input name="wasteWorkAndWreckShamelessPackaginChecked[]" type="checkbox" value="id13"></input></td><td><input name="wasteWorkAndWreckShamelessPackaginChecked[]" type="checkbox" value="id14"></input></td></tr>
+	</table>
+		<hr>
+		<p>Оцінка <?php echo $wasteShamelessPackaginChecked ?></p>
+
+		<hr>
+		<p>Використання ресурсів</p>
+		<p><input type="radio" name="wasteShamelessPackaginChecked"  value="1">Дуже високе</input>
+		<input name="wasteUseOfResourcesShamelessPackaginRadio[]" type="radio" value="2">Високе</input>
+		<input name="wasteUseOfResourcesShamelessPackaginRadio[]" type="radio" value="3">Середнє</input>
+		<input name="wasteUseOfResourcesShamelessPackaginRadio[]" type="radio" value="4">Низьке</input>
+		<input name="wasteUseOfResourcesShamelessPackaginRadio[]" type="radio" value="5">Дуже низьке</input></p>
+		<hr>
+		<p>Оцінка </p>
+
+		<hr>
+	</fieldset>
+</form>
+</body>
+</html>
